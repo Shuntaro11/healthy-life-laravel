@@ -1,0 +1,109 @@
+.post-form-container{
+  text-align: center;
+  border: 1px solid navajowhite;
+  border-radius: 3px;
+  width: 60vw;
+  margin: 20px auto 50px;
+  background: white;
+  padding: 10px 20px;
+}
+.body-value-form-container{
+  margin: 0;
+  width: 30vw;
+}
+
+.edit-image-container{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.arrow-mark{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+.post-input{
+  width: 400px;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.input-date{
+  width: 200px;
+}
+.input-quantity{
+  width: 150px;
+}
+.post-info-input{
+  width: 50vw;
+}
+.form-label{
+  font-size: 20px;
+  margin-top: 20px;
+  color: #2F1C12;
+  margin-bottom: 5px;
+}
+.post-form-notice{
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 960px){
+
+  .post-form-container{
+    width: 90vw;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .post-info-input{
+    width:  100%;
+  }
+
+}
+@media (max-width: 640px) {
+
+  .post-form-container{
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .form-label{
+    font-size: 13px;
+    margin-top: 15px;
+    margin-bottom: 3px;
+  }
+  .post-form-notice{
+    font-size: 10px;
+  }
+
+  .post-input{
+    width: 80vw;
+    line-height: 20px;
+    font-size: 13px;
+  }
+
+  .input-quantity{
+    width: 100px;
+  }
+  .input-date{
+    width: 130px;
+  }
+
+  .post-input-image{
+    width: 60vw;
+    font-size: 10px;
+  }
+
+  .post-info-input{
+    width: 80vw;
+    font-size: 13px;
+  }
+
+}
