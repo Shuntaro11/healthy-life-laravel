@@ -46,9 +46,13 @@ class UserController extends Controller
     
             if(!empty($request['user_image'])){
     
-                // Storage::delete('public/img/' . basename($user->user_image)); //ローカル
-                Storage::disk('s3')->delete(basename($user->user_image)); //本番
-    
+                if(!empty($user->user_image)){
+
+                    // Storage::delete('public/img/' . basename($user->user_image)); //ローカル
+                    Storage::disk('s3')->delete(basename($user->user_image)); //本番
+        
+                }
+                
                 // $path = $request['user_image']->store('public/img'); //ローカル
                 $image = $request['user_image']; //本番用
                 $path = Storage::disk('s3')->put('/', $image, 'public'); //本番用
@@ -77,8 +81,12 @@ class UserController extends Controller
     
             if(!empty($request['user_image'])){
     
-                // Storage::delete('public/img/' . basename($user->user_image)); //ローカル
-                Storage::disk('s3')->delete(basename($user->user_image)); //本番
+                if(!empty($user->user_image)){
+
+                    // Storage::delete('public/img/' . basename($user->user_image)); //ローカル
+                    Storage::disk('s3')->delete(basename($user->user_image)); //本番
+        
+                }
     
                 // $path = $request['user_image']->store('public/img'); //ローカル
                 $image = $request['user_image']; //本番用
@@ -107,12 +115,16 @@ class UserController extends Controller
     public function destroy ()
     {
         $auth = Auth::user();
-        // Storage::delete('public/img/' . basename($auth->user_image)); //ローカル
-        Storage::disk('s3')->delete(basename($auth->user_image)); //本番
 
-        $auth_posts = $auth->posts()->get();
-        foreach ($auth_posts as $post) {
+        if(!empty($auth->user_image)){
+
+            // Storage::delete('public/img/' . basename($auth->user_image)); //ローカル
+            Storage::disk('s3')->delete(basename($auth->user_image)); //本番
+
+            $auth_posts = $auth->posts()->get();
+            foreach ($auth_posts as $post) {
             Storage::disk('s3')->delete(basename($post->image)); //本番
+            }
         }
 
         User::destroy($auth->id);
