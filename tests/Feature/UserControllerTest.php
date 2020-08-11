@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
+use Illuminate\Support\Facades\Auth;
 
 class UserControllerTest extends TestCase
 {
@@ -39,6 +40,10 @@ class UserControllerTest extends TestCase
             ->actingAs(User::find(2))
             ->get('/');
 
+        // 認証されていることを確認
+        $this->assertTrue(Auth::check());
+
+        // topページにリダイレクトし、ログアウトが表示される
         $response->assertStatus(200)
             ->assertViewIs('post.index')
             ->assertSee('ログアウト');
@@ -77,6 +82,26 @@ class UserControllerTest extends TestCase
 
         // `users` テーブルが0件になっている
         $this->assertEquals(0, User::count());
+
+    }
+
+    public function test_user_logout()
+    {
+        $user = factory(User::class)->create();
+    
+        $this->actingAs($user);
+    
+        // 認証されていることを確認
+        $this->assertTrue(Auth::check());
+    
+        // ログアウトを実行
+        $response = $this->post('logout');
+    
+        // 認証されていない
+        $this->assertFalse(Auth::check());
+    
+         // topページにリダイレクトする
+        $response->assertRedirect('/');
 
     }
 
