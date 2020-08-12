@@ -19,7 +19,7 @@ class UserControllerTest extends TestCase
      * @return void
      */
 
-    public function test_user_register()
+    public function test_ユーザー新規登録()
     {
         $email = 'user@example.com';
         $this->post(route('register'), [
@@ -32,12 +32,12 @@ class UserControllerTest extends TestCase
         $this->assertDatabaseHas('users', ['email' => $email]);
     }
 
-    public function test_user_login()
+    public function test_ユーザーログイン()
     {
         $user = factory(User::class)->create();
 
         $response = $this
-            ->actingAs(User::find(2))
+            ->actingAs($user)
             ->get('/');
 
         // 認証されていることを確認
@@ -50,42 +50,7 @@ class UserControllerTest extends TestCase
 
     }
 
-    public function test_move_user_show()
-    {
-        $user = factory(User::class)->create([
-            'name' => 'testuser',
-        ]);
-
-        $response = $this
-            ->actingAs(User::find(3))
-            ->get(route('users.show', 3));
-
-        $response->assertStatus(200)
-            ->assertViewIs('user.show')
-            ->assertSee('testuser');
-
-    }
-
-    public function test_user_destroy()
-    {
-
-        $user = factory(User::class)->create();
-
-        // DELETE リクエスト
-        $response = $this
-            ->actingAs(User::find(4));
-
-        $response = $this->delete(route('users.destroy', 4));
-
-        // ステータスコード 302
-        $response->assertStatus(302);
-
-        // `users` テーブルが0件になっている
-        $this->assertEquals(0, User::count());
-
-    }
-
-    public function test_user_logout()
+    public function test_ユーザーログアウト()
     {
         $user = factory(User::class)->create();
     
@@ -102,6 +67,41 @@ class UserControllerTest extends TestCase
     
          // topページにリダイレクトする
         $response->assertRedirect('/');
+
+    }
+
+    public function test_ログイン後、マイページへ遷移()
+    {
+        $user = factory(User::class)->create([
+            'name' => 'testuser',
+        ]);
+
+        $response = $this
+            ->actingAs($user)
+            ->get(route('users.show', $user->id));
+
+        $response->assertStatus(200)
+            ->assertViewIs('user.show')
+            ->assertSee('testuser');
+
+    }
+
+    public function test_ユーザーを削除()
+    {
+
+        $user = factory(User::class)->create();
+
+        // DELETE リクエスト
+        $response = $this
+            ->actingAs($user);
+
+        $response = $this->delete(route('users.destroy', $user->id));
+
+        // ステータスコード 302
+        $response->assertStatus(302);
+
+        // `users` テーブルが0件になっている
+        $this->assertEquals(0, User::count());
 
     }
 
