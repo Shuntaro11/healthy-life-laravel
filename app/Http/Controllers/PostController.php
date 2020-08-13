@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use \App\Post;
 use \App\Tag;
 use Storage;
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 class PostController extends Controller
 {
@@ -81,6 +82,24 @@ class PostController extends Controller
             
             $post->save();
             $post->tags()->attach($tag_ids);
+
+            $twitter = new TwitterOAuth(
+
+                env('TWITTER_CONSUMER_KEY'),
+                env('TWITTER_CONSUMER_SECRET'),
+                env('TWITTER_ACCESS_TOKEN'),
+                env('TWITTER_ACCESS_SECRET')
+
+            );
+
+            $twitter->post("statuses/update", [
+                "status" =>
+                    'New Recipe Post!' . PHP_EOL .
+                    '新しいレシピが投稿されました!' . PHP_EOL .
+                    'タイトル「' . $post->title . '」' . PHP_EOL .
+                    '#healthylife #レシピ #健康 #ヘルシー' . PHP_EOL .
+                    'http://healthylife-app.site/'
+            ]);
             
             return redirect('/');
 
