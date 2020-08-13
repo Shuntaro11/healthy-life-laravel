@@ -98,11 +98,12 @@ class PostController extends Controller
 
                 "status" =>
                     'New Recipe Post!' . PHP_EOL .
-                    '新しいレシピが投稿されました!' . PHP_EOL .
-                    'タイトル「' . $post->title . '」' . PHP_EOL .
+                    '新しいレシピ' . PHP_EOL .
+                    '「' . $request->title . '」' . PHP_EOL .
+                    'が投稿されました!' . PHP_EOL .
                     '#healthylife #レシピ #健康 #ヘルシー' . PHP_EOL .
                     'http://healthylife-app.site/',
-                    
+
                 'media_ids' => implode(',', [
                         $media->media_id_string,
                 ])
