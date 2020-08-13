@@ -83,12 +83,12 @@ class PostController extends Controller
             $post->save();
             $post->tags()->attach($tag_ids);
 
-            if ( app()->isLocal() || app()->runningUnitTests() ) {
+            if ( app()->isLocal() || app()->runningUnitTests() ) { //ローカル用
 
                 return redirect('/');
                 
             }
-            else {
+            else { //本番用
 
                 $twitter = new TwitterOAuth(
 
