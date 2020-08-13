@@ -83,32 +83,42 @@ class PostController extends Controller
             $post->save();
             $post->tags()->attach($tag_ids);
 
-            $twitter = new TwitterOAuth(
+            if ( app()->isLocal() || app()->runningUnitTests() ) {
 
-                env('TWITTER_CONSUMER_KEY'),
-                env('TWITTER_CONSUMER_SECRET'),
-                env('TWITTER_ACCESS_TOKEN'),
-                env('TWITTER_ACCESS_SECRET')
+                return redirect('/');
+                
+            }
+            else {
 
-            );
+                $twitter = new TwitterOAuth(
 
-            $media = $twitter->upload('media/upload', ['media' => $image]);
-
-            $twitter->post("statuses/update", [
-
-                "status" =>
-                    'New Recipe Post!' . PHP_EOL .
-                    '新しいレシピが投稿されました!' . PHP_EOL .
-                    'タイトル「' . $post->title . '」' . PHP_EOL .
-                    '#healthylife #レシピ #健康 #ヘルシー' . PHP_EOL .
-                    'http://healthylife-app.site/',
-                    
-                'media_ids' => implode(',', [
-                        $media->media_id_string,
-                ])
-            ]);
+                    env('TWITTER_CONSUMER_KEY'),
+                    env('TWITTER_CONSUMER_SECRET'),
+                    env('TWITTER_ACCESS_TOKEN'),
+                    env('TWITTER_ACCESS_SECRET')
+    
+                );
+    
+                $media = $twitter->upload('media/upload', ['media' => $image]);
+    
+                $twitter->post("statuses/update", [
+    
+                    "status" =>
+                        'New Recipe Post!' . PHP_EOL .
+                        '新しいレシピ' . PHP_EOL .
+                        '「' . $request->title . '」' . PHP_EOL .
+                        'が投稿されました!' . PHP_EOL .
+                        '#healthylife #レシピ #健康 #ヘルシー' . PHP_EOL .
+                        'http://healthylife-app.site/',
+    
+                    'media_ids' => implode(',', [
+                            $media->media_id_string,
+                    ])
+                ]);
+                
+                return redirect('/');
+            }
             
-            return redirect('/');
 
         } else {
           
