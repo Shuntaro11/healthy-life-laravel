@@ -60,7 +60,7 @@
 
 <img width="596" alt="healthylifeimage4" src="https://user-images.githubusercontent.com/59483718/90241019-36c27c00-de65-11ea-97de-e4751dfb3de6.png">
 
-![healthylifeimage3](https://user-images.githubusercontent.com/59483718/90240963-25796f80-de65-11ea-9e48-642c6ec5eda4.jpg)
+<img width="596" alt="healthylifeimage3" src="https://user-images.githubusercontent.com/59483718/90240963-25796f80-de65-11ea-9e48-642c6ec5eda4.jpg">
 
 
 
