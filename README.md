@@ -90,7 +90,7 @@
 
 ## 使用した言語
 
-- PHP(Laravel)、HTML、CSS、javascript(Vue.js,jQuery,chart.js)
+- PHP(Laravel)、HTML、CSS/SCSS、javascript(Vue.js,jQuery,chart.js)
 
 ## ER図
 
