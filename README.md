@@ -1,13 +1,15 @@
-# Healthy Life
-- URL: http://healthylife-app.site/
+# README
+
+[Healthy Life](http://healthylife-app.site/)
+URL: http://healthylife-app.site/
 
 
-# サービス概要
+## サービス概要
 - 食事で摂取した栄養を記録し、管理できるサービスです
 - 健康的な食生活を送るために、みんなのおすすめレシピを共有できます
 
 
-# できること
+## できること
 
 - ２週間分のBMI値をグラフで管理
 - １週間分の摂取した栄養素を表に出力した数値で確認できる
@@ -20,12 +22,14 @@
 - アプリ公式Twitterへの自動投稿
 
 
-# アカウント
+## アカウント
 
-- Eメールアドレス：gest@gest.com
-- パスワード：gestgest
+```
+Eメールアドレス：gest@gest.com
+パスワード：gestgest
+```
 
-# サービスイメージ
+## サービスイメージ
 
 ## トップ画面
 
