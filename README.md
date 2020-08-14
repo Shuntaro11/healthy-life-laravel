@@ -1,13 +1,13 @@
-# README
+# Healthy Life
 - URL: http://healthylife-app.site/
 
 
-## サービス概要
+# サービス概要
 - 食事で摂取した栄養を記録し、管理できるサービスです
 - 健康的な食生活を送るために、みんなのおすすめレシピを共有できます
 
 
-## できること
+# できること
 
 - ２週間分のBMI値をグラフで管理
 - １週間分の摂取した栄養素を表に出力した数値で確認できる
@@ -20,14 +20,14 @@
 - アプリ公式Twitterへの自動投稿
 
 
-## アカウント
+# アカウント
 
 - Eメールアドレス：gest@gest.com
 - パスワード：gestgest
 
-## サービスイメージ
+# サービスイメージ
 
-### トップ画面
+## トップ画面
 
 - 新着レシピ一覧画面
 - ゲストユーザーもアクセス可能
@@ -36,7 +36,8 @@
 ![healthylifeimage1](https://user-images.githubusercontent.com/59483718/89257342-eecf7800-d660-11ea-8c5b-9546cd464ff8.jpg)
 
 
-### ユーザーマイページ
+
+## ユーザーマイページ
 
 - 各ユーザーの詳細ページ
 - 各ユーザーの投稿一覧が表示される
@@ -45,18 +46,22 @@
 ![healthylifeimage2](https://user-images.githubusercontent.com/59483718/89257010-4e795380-d660-11ea-92f4-19b2fb2beda1.jpg)
 
 
-### グラフによるBMI値管理(マイデータ画面)
+
+## グラフによるBMI値管理(マイデータ画面)
 
 - 身長と体重を登録することで日々のBMI値をグラフで管理できる
 
 <img width="717" alt="bmi-graph-image" src="https://user-images.githubusercontent.com/59483718/89257091-7799e400-d660-11ea-84c3-def354b38dc2.png">
 
 
-### 摂取栄養素の視覚化(マイデータ画面)
+
+## 摂取栄養素の視覚化(マイデータ画面)
 
 <img width="903" alt="ate-graph-image" src="https://user-images.githubusercontent.com/59483718/89257072-6cdf4f00-d660-11ea-9cd1-29545642317e.png">
 
-### 公式twitterによる自動投稿
+
+
+## 公式twitterによる自動投稿
 
 <img width="596" alt="healthylifeimage4" src="https://user-images.githubusercontent.com/59483718/90241019-36c27c00-de65-11ea-97de-e4751dfb3de6.png">
 
