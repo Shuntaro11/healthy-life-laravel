@@ -1,17 +1,20 @@
-.footer-container{
+.footer-container {
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   margin-top: 50px;
 }
-.footer-text{
+
+.footer-text {
   text-align: center;
   line-height: 200px;
   font-size: 20px;
 }
+
 @media (max-width: 640px) {
-  .footer-container{
+  .footer-container {
     margin-top: 30px;
   }
-  .footer-text{
+
+  .footer-text {
     line-height: 100px;
     font-size: 10px;
   }

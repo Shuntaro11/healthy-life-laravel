@@ -1,82 +1,96 @@
-.recipe-top-bar{
+.recipe-top-bar {
   display: flex;
   justify-content: space-between;
 }
-.like-box{
+
+.like-box {
   display: flex;
   line-height: 80px;
 }
-.like-btn-wrapper{
+
+.like-btn-wrapper {
   border: none;
   background: white;
+
+  &:focus {
+    outline: 0;
+  }
 }
-.like-btn-wrapper:focus {
-	outline:0;
-}
-.like-button{
+
+.like-button {
   margin-right: 10px;
   font-size: 30px;
   color: rgba(0, 0, 0, 0.5);
 }
-.un-like-button{
+
+.un-like-button {
   color: crimson;
 }
-.like-count{
+
+.like-count {
   font-size: 15px;
 }
-.recipe-show-title{
+
+.recipe-show-title {
   font-weight: bold;
   font-size: 25px;
   margin-bottom: 20px;
   color: forestgreen;
 }
-.post-show-image-wrapper{
+
+.post-show-image-wrapper {
   width: 40vw;
   height: 40vw;
   margin: auto;
   border: 1px solid silver;
   background-color: rgb(240, 240, 240);
 }
-.recipe-show-content{
+
+.recipe-show-content {
   width: 55vw;
   margin: 20px auto;
   padding: 20px;
   text-align: left;
 }
 
-.recipe-date{
+.recipe-date {
   text-align: right;
   color: dimgray;
   margin-top: 10px;
 }
-.comment-container{
+
+.comment-container {
   width: 80vw;
   margin: 20px auto;
 }
-.comment-form{
+
+.comment-form {
   width: 80vw;
   text-align: right;
 }
-.comment-input{
+
+.comment-input {
   width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.247);
   font-size: 13px;
   border-radius: 3px;
-  vertical-align : middle;
+  vertical-align: middle;
   padding-left: 5px;
 }
-.comment-btn{
+
+.comment-btn {
   width: 100px;
   height: 30px;
-  vertical-align : middle;
+  vertical-align: middle;
   border: 1px solid rgba(0, 0, 0, 0.247);
   background-color: whitesmoke;
   color: steelblue;
   font-size: 13px;
   border-radius: 3px;
-  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
 }
-.comment-input-guest{
+
+.comment-input-guest {
   font-size: 10px;
   height: 30px;
   line-height: 30px;
@@ -85,105 +99,107 @@
   margin-bottom: 20px;
 }
 
-.comment-index{
+.comment-index {
   color: dimgray;
 }
-.comment-index-title{
+
+.comment-index-title {
   font-size: 17px;
   margin-bottom: 10px;
 }
-.comment-user-name{
+
+.comment-user-name {
   margin-top: 10px;
   font-weight: bold;
   color: #212529;
 }
-.comment-content{
+
+.comment-content {
   font-family: 'YuGothic';
 }
-.post-edit-link{
+
+.post-edit-link {
   text-align: right;
   width: 60vw;
   margin: auto;
   padding-right: 10px;
-}
-.post-edit-link .delete-link{
-  margin-top: 10px;
+
+  .delete-link {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 960px) {
-
-  .recipe-show-title{
+  .recipe-show-title {
     font-size: 20px;
   }
 
-  .post-edit-link{
+  .post-edit-link {
     width: 90vw;
   }
 
-  .post-show-image-wrapper{
+  .post-show-image-wrapper {
     width: 50vw;
     height: 50vw;
   }
 
-  .recipe-show-content{
+  .recipe-show-content {
     width: 80vw;
   }
 }
 
 @media (max-width: 640px) {
-
-  .recipe-show-title{
+  .recipe-show-title {
     font-size: 13px;
     margin-bottom: 5px;
   }
 
-  .post-edit-link{
+  .post-edit-link {
     text-align: left;
     justify-content: space-between;
     width: 70vw;
     display: flex;
     padding: 0 10px;
     margin-bottom: 10px;
+
+    .delete-link {
+      margin: 0;
+      padding: 0;
+    }
   }
 
-  .post-edit-link .delete-link{
-    margin: 0;
-    padding: 0;
-  }
-
-  .like-box{
+  .like-box {
     line-height: 30px;
     padding: 0;
   }
-  .like-button{
+
+  .like-button {
     margin-right: 5px;
     font-size: 20px;
   }
-  .like-count{
+
+  .like-count {
     font-size: 10px;
   }
 
-  .post-show-image-wrapper{
+  .post-show-image-wrapper {
     width: 80vw;
     height: 80vw;
     border: none;
   }
 
-  .recipe-show-content{
+  .recipe-show-content {
     width: 80vw;
     padding: 5px;
     font-size: 12px;
   }
-  
-  .recipe-date{
+
+  .recipe-date {
     margin-top: 5px;
     font-size: 10px;
   }
 
-  .comment-user-name{
-    font-size: 13px;
-  }
-  .comment-content{
+  .comment-user-name, .comment-content {
     font-size: 13px;
   }
 }

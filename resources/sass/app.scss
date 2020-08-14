@@ -12,3 +12,30 @@
 @import '~@fortawesome/fontawesome-free/scss/regular';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
+
+/* 共通部分 */
+@import 'general';
+
+/* トップ画面 */
+@import 'top';
+
+/* ユーザー詳細画面 */
+@import 'user_show';
+
+/* ヘッダー  */
+@import 'header';
+
+/* フッター */
+@import 'footer';
+
+/* レシピ詳細画面 */
+@import 'post-show';
+
+/* データ管理画面 */
+@import 'meal-create';
+
+/* レシピ投稿画面 */
+@import 'post-create';
+
+/* 登録フォーム遷移用画面 */
+@import 'confirm';

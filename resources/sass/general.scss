@@ -4,12 +4,12 @@
   padding: 0;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
 
-input{
+input {
   padding-left: 5px;
   box-shadow: inset 1px 1px 4px #e6e6e6;
   border: 1px solid dimgray;
@@ -17,11 +17,11 @@ input{
   background: white;
 }
 
-li{
+li {
   list-style: none;
 }
 
-textarea{
+textarea {
   padding-left: 5px;
   box-shadow: inset 1px 1px 4px #e6e6e6;
   border: 1px solid dimgray;
@@ -29,11 +29,11 @@ textarea{
   background: white;
 }
 
-.container{
+.container {
   text-align: center;
 }
 
-.page-title{
+.page-title {
   text-align: center;
   margin-top: 20px;
   font-size: 30px;
@@ -41,15 +41,16 @@ textarea{
   color: darkorange;
 }
 
-.pagination{
+.pagination {
   padding-left: 43vw;
   margin-bottom: 100px;
 }
-.validation-message{
+
+.validation-message {
   color: tomato;
 }
 
-.nav-bar{
+.nav-bar {
   width: 80vw;
   display: flex;
   justify-content: space-between;
@@ -60,29 +61,33 @@ textarea{
   bottom: 20px;
   left: 10vw;
   border: 1px solid orange;
-}
-.nav-bar a{
-  text-align: center;
-}
-.nav-bar i{
-  font-size: 20px;
-}
-.nav-bar p{
-  font-size: 12px;
-  margin-top: 5px;
+
+  a {
+    text-align: center;
+  }
+
+  i {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 12px;
+    margin-top: 5px;
+  }
 }
 
-.main-container{
+.main-container {
   margin-top: 50px;
 }
 
-.container-title{
+.container-title {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
   color: #2F1C12;
 }
-.form-button{
+
+.form-button {
   position: relative;
   display: inline-block;
   padding: 5px 20px;
@@ -93,21 +98,25 @@ textarea{
   background: #fd9535;
   border-bottom: solid 2px #d27d00;
   border-radius: 4px;
-  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   font-weight: bold;
+
+  &:active {
+    border-bottom: solid 2px #fd9535;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  }
 }
-.form-button:active {
-  border-bottom: solid 2px #fd9535;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
-}
-.retire-button{
+
+.retire-button {
   background: #fd3535;
   border-bottom: solid 2px #d20000;
+
+  &:active {
+    border-bottom: solid 2px #fd3535;
+  }
 }
-.retire-button:active {
-  border-bottom: solid 2px #fd3535;
-}
-.preview-wrapper{
+
+.preview-wrapper {
   position: relative;
   width: 30vw;
   height: 30vw;
@@ -121,59 +130,54 @@ textarea{
   color: darkgray;
   margin-top: 5px;
 }
-.user-image-preview{
+
+.user-image-preview {
   border-radius: 100%;
   width: 20vw;
   height: 20vw;
   padding-top: 8vw;
   font-size: 13px;
 }
-.food-image-preview{
+
+.food-image-preview {
   width: 20vw;
   height: 20vw;
   font-size: 13px;
 }
 
 @media (max-width: 960px) {
-
-  .page-title{
+  .page-title {
     margin-top: 5px;
     font-size: 25px;
   }
 
-  .pagination{
+  .pagination {
     padding-left: 43vw;
     margin-bottom: 20px;
   }
 
-  .preview-wrapper{
+  .preview-wrapper {
     padding-top: 50px;
     width: 50vw;
     height: 50vw;
   }
 
-  .user-image-preview{
+  .user-image-preview, .food-image-preview {
     width: 30vw;
     height: 30vw;
   }
-
-  .food-image-preview{
-    width: 30vw;
-    height: 30vw;
-  }
-  
 }
 
 @media (max-width: 640px) {
-  .main-container{
+  .main-container {
     margin-top: 10px;
   }
 
-  .page-title{
+  .page-title {
     font-size: 18px;
   }
 
-  .nav-bar{
+  .nav-bar {
     width: 100vw;
     background-color: white;
     padding: 15px 30px;
@@ -183,17 +187,17 @@ textarea{
     left: 0;
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    p {
+      display: none;
+    }
   }
 
-  .nav-bar p{
-    display: none;
-  }
-
-  .pagination{
+  .pagination {
     padding-left: 33vw;
   }
 
-  .preview-wrapper{
+  .preview-wrapper {
     border: 1px dashed darkgray;
     width: 40vw;
     height: 40vw;
@@ -201,26 +205,20 @@ textarea{
     padding-top: 20px;
   }
 
-  .user-image-preview{
+  .user-image-preview, .food-image-preview {
     width: 30vw;
     height: 30vw;
     padding-top: 10px;
   }
 
-  .food-image-preview{
-    width: 30vw;
-    height: 30vw;
-    padding-top: 10px;
-  }
-
-  .form-button{
+  .form-button {
     padding: 3px 10px;
     margin-top: 10px;
     font-size: 12px;
     border-radius: 2px;
   }
 
-  .container-title{
+  .container-title {
     font-size: 15px;
     font-weight: normal;
   }
