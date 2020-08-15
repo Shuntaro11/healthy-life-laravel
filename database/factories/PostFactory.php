@@ -8,7 +8,7 @@ use Illuminate\Http\UploadedFile;
 
 $factory->define(Post::class, function (Faker $faker) {
 
-    $testImage = UploadedFile::fake()->image('test.jpg');
+    $testImage = UploadedFile::fake()->image('test.jpg', 100, 100);
 
     return [
         'title' => $faker->sentence(rand(1,10)),

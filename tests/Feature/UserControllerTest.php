@@ -45,7 +45,7 @@ class UserControllerTest extends TestCase
 
         // topページにリダイレクトし、ログアウトが表示される
         $response->assertStatus(200)
-            ->assertViewIs('home')
+            ->assertViewIs('post.index')
             ->assertSee('ログアウト');
 
     }
