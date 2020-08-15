@@ -17728,7 +17728,6 @@ textarea {
 .nav-link__gest:hover {
   border: 1px solid white;
   color: white;
-  font-weight: bold;
 }
 
 .welcome-message {
@@ -17962,7 +17961,7 @@ textarea {
 
 @media (max-width: 640px) {
   .gest-header {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .gest-header__top-bar {
@@ -17990,7 +17989,7 @@ textarea {
     line-height: 18px;
   }
 
-  .search-form-container {
+  .gest-header .search-form-container {
     padding: 10px;
     bottom: -20px;
   }
