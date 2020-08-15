@@ -38,6 +38,9 @@
   border-radius: 5px;
   margin-left: 10px;
   color: #1d68a7;
+  &__top-page{
+    color: white;
+  }
 
   &:hover {
     border: 1px solid #4c65d4;
@@ -50,6 +53,9 @@
   font-size: 15px;
   line-height: 50px;
   margin-right: 10px;
+  &__top-page{
+    color: white;
+  }
 }
 
 .search-form {

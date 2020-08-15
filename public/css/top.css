@@ -1,0 +1,41 @@
+.top-page-header{
+  width: 100vw;
+  height: 80vh;
+  background-image: url("/images/topimage.jpg");
+  background-size: cover;
+  background-position: left center;
+  padding-top: 10px;
+}
+.top-page-header__top-bar{
+  width: 100vw;
+  height: 60px;
+  border-bottom: 1px solid gold;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.top-page-header__content{
+  color: white;
+}
+
+.top-page-header__content h1{
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 60px;
+}
+.top-page-header__content h4{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.top-page-header__content h5{
+  font-size: 15px;
+  line-height: 25px;
+}
+
+/* .nav-link__top-page{
+  color: white;
+}
+.welcome-message__top-page{
+  color: white;
+} */

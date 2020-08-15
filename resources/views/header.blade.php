@@ -1,7 +1,7 @@
 
 <div class="header-container">
     <div class="header-container-top-bar">
-    <a href="{{ route('top') }}"><img class="header-logo" src="/healthylifelogo.png"></a>
+        <a href="{{ route('top') }}"><img class="header-logo" src="/images/healthylifelogo.png"></a>
         <div class="auth-nav">
             @auth
                 <div class="welcome-message">ログイン中 : {{Auth::user()->name}}</div>
