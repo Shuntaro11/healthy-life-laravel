@@ -44,9 +44,12 @@
   }
   &__gest{
     color: white;
+    border: 1px solid white;
+    font-weight: bold;
     &:hover {
+      background: gold;
+      color: darkcyan;
       border: 1px solid white;
-      color: white;
     }
   }
 }

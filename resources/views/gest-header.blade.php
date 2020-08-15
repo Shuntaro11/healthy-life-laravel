@@ -4,7 +4,7 @@
 <div class="gest-header__top-bar">
     <a href="{{ route('top') }}"><img class="header-logo" src="/images/healthylife-top-logo.png"></a>
     <div class="auth-nav">
-        <div class="welcome-message">Healthy Lifeへようこそ！</div>
+        <div class="welcome-message welcome-message__gest">Healthy Lifeへようこそ！</div>
         <a class="nav-link nav-link__gest" href="/">トップ</i></a>
         <a class="nav-link nav-link__gest" href="{{ route('login') }}">ログイン</a>
         @if (Route::has('register'))

@@ -17723,11 +17723,14 @@ textarea {
 
 .nav-link__gest {
   color: white;
+  border: 1px solid white;
+  font-weight: bold;
 }
 
 .nav-link__gest:hover {
+  background: gold;
+  color: darkcyan;
   border: 1px solid white;
-  color: white;
 }
 
 .welcome-message {
