@@ -1,12 +1,12 @@
 @extends('template')
 
-@section('title', 'top')
+@section('title', 'レシピ一覧')
 
 @section('content')
-    @include("header")
     @auth
-
+        @include("header")
     @else
+        @include("gest-header")
         <a href="/users/confirm"><div class="confirm-link">ヘルシーライフに登録すると様々な機能が利用できます！</div></a>
     @endauth
 
@@ -19,7 +19,7 @@
                 <div class="top-bar">
                     <div class="user-info">
                         <div class="image-wrapper user-image-wrapper">
-                            <a href="/users/{{$post->user->id}}"><img class="inside-image" src="{{ $post->user->user_image }}" onerror="this.src='/noicon.png'"></a>
+                            <a href="/users/{{$post->user->id}}"><img class="inside-image" src="{{ $post->user->user_image }}" onerror="this.src='/images/noicon.png'"></a>
                         </div>
                     <a href="/users/{{$post->user->id}}"><p class="user-name">{{ $post->user->name }}</p></a>
                     </div>

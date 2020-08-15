@@ -20,7 +20,7 @@ Eメールアドレス：gest@gest.com
 ## 使用した技術
 
 - Laravel
-- HTML、CSS/SCSS
+- HTML,CSS/SCSS
 - Vue.js
 - jQuery
 - chart.js
@@ -55,7 +55,7 @@ Eメールアドレス：gest@gest.com
 ## できること
 
 - ２週間分のBMI値をグラフで管理
-- １週間分の摂取した栄養素を表に出力した数値で確認できる
+- 摂取した栄養素を表に出力し確認できる
 - ユーザー登録、編集、削除
 - レシピの投稿、編集、削除
 - レシピ検索
@@ -88,25 +88,23 @@ Eメールアドレス：gest@gest.com
 
 
 
-## グラフによるBMI値管理(マイデータ画面)
+## グラフによる管理(マイデータ画面)
 
 - 身長と体重を登録することで日々のBMI値をグラフで管理できる
 
-<img width="717" alt="bmi-graph-image" src="https://user-images.githubusercontent.com/59483718/89257091-7799e400-d660-11ea-84c3-def354b38dc2.png">
+<img width="600" alt="bmi-graph-image" src="https://user-images.githubusercontent.com/59483718/89257091-7799e400-d660-11ea-84c3-def354b38dc2.png">
 
+- 摂取栄養素の視覚化
 
-
-## 摂取栄養素の視覚化(マイデータ画面)
-
-<img width="903" alt="ate-graph-image" src="https://user-images.githubusercontent.com/59483718/89257072-6cdf4f00-d660-11ea-9cd1-29545642317e.png">
+<img width="600" alt="ate-graph-image" src="https://user-images.githubusercontent.com/59483718/89257072-6cdf4f00-d660-11ea-9cd1-29545642317e.png">
 
 
 
 ## 公式twitterによる自動投稿
 
-<img width="596" alt="healthylifeimage4" src="https://user-images.githubusercontent.com/59483718/90241019-36c27c00-de65-11ea-97de-e4751dfb3de6.png">
+<img width="600" alt="healthylifeimage4" src="https://user-images.githubusercontent.com/59483718/90241019-36c27c00-de65-11ea-97de-e4751dfb3de6.png">
 
-<img width="596" alt="healthylifeimage3" src="https://user-images.githubusercontent.com/59483718/90240963-25796f80-de65-11ea-9e48-642c6ec5eda4.jpg">
+<img width="600" alt="healthylifeimage3" src="https://user-images.githubusercontent.com/59483718/90240963-25796f80-de65-11ea-9e48-642c6ec5eda4.jpg">
 
 
 
