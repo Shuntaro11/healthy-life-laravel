@@ -1,4 +1,3 @@
-
 <div class="header-container">
     <div class="header-container-top-bar">
         <a href="{{ route('top') }}"><img class="header-logo" src="/images/healthylifelogo.png"></a>
