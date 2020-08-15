@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('title', 'top')
+@section('title', 'レシピ一覧')
 
 @section('content')
     @include("header")
