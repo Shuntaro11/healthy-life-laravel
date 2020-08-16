@@ -1,6 +1,6 @@
 FROM php:7.3-fpm-alpine
 
-COPY ./src /work
+COPY . /work
 COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
 
 LABEL maintainer "Shuntaro Futemma"
