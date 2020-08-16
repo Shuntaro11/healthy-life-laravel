@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   build:
     docker:
@@ -86,4 +86,4 @@ workflows:
           family: 'healthy-life' # ECSのタスク定義名
           cluster-name: '$healthy-life' #ECSのクラスターのARN
           service-name: 'healthy-life' #サービス名
-          container-image-name-updates: "container=rails,tag=${CIRCLE_SHA1}"
+          container-image-name-updates: "container=php,tag=${CIRCLE_SHA1}"
