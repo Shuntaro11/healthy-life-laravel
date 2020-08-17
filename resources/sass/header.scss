@@ -71,17 +71,19 @@
 .search-input {
   width: 400px;
   line-height: 40px;
+  height: 40px;
 }
 
 .search-btn {
-  width: 50px;
-  line-height: 40px;
+  width: 40px;
+  height: 40px;
   vertical-align: middle;
   background-color: gold;
   border-radius: 3px;
-  border: 2px solid orange;
+  border: 1px solid orange;
 
   i {
+    line-height: 40px;
     font-size: 20px;
     color: white;
   }
@@ -137,19 +139,20 @@
 
   .search-input {
     width: 200px;
-    line-height: 20px;
+    height: 30px;
+    line-height: 30px;
     font-size: 13px;
     border: 1px solid rgba(0, 0, 0, 0.3);
   }
 
   .search-btn {
-    width: 20px;
-    line-height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 3px;
     border: 1px solid orange;
-
     i {
-      font-size: 10px;
+      font-size: 15px;
+      line-height: 30px;
     }
   }
 }
