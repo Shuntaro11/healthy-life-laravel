@@ -17625,7 +17625,7 @@ textarea {
 .show-user-image-wrapper {
   width: 200px;
   height: 200px;
-  margin: 0 auto;
+  margin: 20px auto 20px;
   border-radius: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -17662,10 +17662,11 @@ textarea {
   .show-user-image-wrapper {
     width: 70px;
     height: 70px;
+    margin-top: 10px;
   }
 
   .user-edit-link {
-    margin: 5px auto;
+    margin: 0 auto 30px;
     width: 100px;
     text-align: center;
     border-radius: 3px;
