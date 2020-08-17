@@ -16,7 +16,6 @@ jobs:
             sudo apt-get update && sudo apt-get install -y libpng-dev libjpeg-dev |
             sudo docker-php-ext-configure gd --with-png-dir=/usr/include --with-jpeg-dir=/usr/include |
             sudo docker-php-ext-install pdo_mysql gd
-            command: sudo docker-php-ext-install pdo_mysql
 
       - restore_cache:
           keys:
