@@ -14,8 +14,11 @@ jobs:
           name: Update apt-get
           command: sudo apt-get update
       - run:
-          name: Docker php extensions install
-          command: sudo docker-php-ext-install pdo_mysql
+        name: test_setup
+        command: |
+          sudo apt-get update && sudo apt-get install -y libpng-dev libjpeg-dev |
+          sudo docker-php-ext-configure gd --with-png-dir=/usr/include --with-jpeg-dir=/usr/include |
+          sudo docker-php-ext-install pdo_mysql gd
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "composer.json" }}
@@ -23,13 +26,6 @@ jobs:
       - run:
           name: Install PHP libraries
           command: composer install -n --prefer-dist
-          
-      # Install Library 
-      - run: sudo apt-get install -y libpng-dev libjpeg-dev 
-
-      # Install PHP Extension 
-      - run: sudo docker-php-ext-configure gd --with-png-dir=/usr/include --with-jpeg-dir=/usr/include
-      - run: sudo docker-php-ext-install gd 
 
       - save_cache:
           paths:
