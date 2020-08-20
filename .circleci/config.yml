@@ -41,8 +41,8 @@ jobs:
 workflows:
   test:
     jobs:
-      - build:
-        
+      - build
+
   nginx-deploy:
     jobs:
       - aws-ecr/build-and-push-image:
