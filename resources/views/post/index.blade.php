@@ -7,7 +7,7 @@
         @include("header")
     @else
         @include("gest-header")
-        <a href="/users/confirm"><div class="confirm-link">ヘルシーライフに登録すると様々な機能が利用できます！</div></a>
+        <a href="/users/confirm"><div class="confirm-link">ヘルシーライフに登録すると様々な機能が利用できます！！</div></a>
     @endauth
 
     @isset($search_result)
