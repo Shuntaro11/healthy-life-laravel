@@ -51,8 +51,6 @@ workflows:
           dockerfile: ./docker/nginx/Dockerfile
           repo: nginx
           tag: "${CIRCLE_SHA1}"
-          requires:
-            - build
           filters:
             branches:
               only: master
@@ -76,8 +74,6 @@ workflows:
           dockerfile: ./docker/php/Dockerfile
           repo: php
           tag: "${CIRCLE_SHA1}"
-          requires:
-            - build
           filters:
             branches:
               only: master
