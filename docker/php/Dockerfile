@@ -19,3 +19,7 @@ RUN set -eux && \
   curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
   composer config -g repos.packagist composer https://packagist.jp && \
   composer global require hirak/prestissimo
+
+RUN php artisan migrate && \
+  chmod -R 777 storage \
+    bootstrap/cache

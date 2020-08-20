@@ -52,7 +52,7 @@ workflows:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           create-repo: true
           dockerfile: ./docker/nginx/Dockerfile
-          repo: nginx
+          repo: healthy-life-nginx
           tag: "${CIRCLE_SHA1}"
           filters:
             branches:
@@ -63,7 +63,7 @@ workflows:
           family: 'healthy-life'
           cluster-name: 'healthy-life'
           service-name: 'healthy-life'
-          container-image-name-updates: "container=healthy-life-nginx,tag=${CIRCLE_SHA1}"
+          container-image-name-updates: "container=web,tag=${CIRCLE_SHA1}"
   
   php-deploy:
     jobs:
@@ -74,7 +74,7 @@ workflows:
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           create-repo: true
           dockerfile: ./docker/php/Dockerfile
-          repo: php
+          repo: healthy-life-php
           tag: "${CIRCLE_SHA1}"
           filters:
             branches:
@@ -85,4 +85,4 @@ workflows:
           family: 'healthy-life'
           cluster-name: 'healthy-life'
           service-name: 'healthy-life'
-          container-image-name-updates: "container=healthy-life-php,tag=${CIRCLE_SHA1}"
+          container-image-name-updates: "container=app,tag=${CIRCLE_SHA1}"
