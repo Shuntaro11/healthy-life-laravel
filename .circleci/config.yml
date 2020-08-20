@@ -39,6 +39,10 @@ jobs:
           command: vendor/bin/phpunit
 
 workflows:
+  test:
+    jobs:
+      - build:
+        
   nginx-deploy:
     jobs:
       - aws-ecr/build-and-push-image:
