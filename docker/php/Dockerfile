@@ -20,6 +20,8 @@ RUN set -eux && \
   composer config -g repos.packagist composer https://packagist.jp && \
   composer global require hirak/prestissimo
 
+WORKDIR /work
+
 RUN php artisan migrate && \
   chmod -R 777 storage \
     bootstrap/cache
