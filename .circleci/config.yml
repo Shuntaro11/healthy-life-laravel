@@ -41,7 +41,6 @@ jobs:
 workflows:
   nginx-deploy:
     jobs:
-      - build
       - aws-ecr/build-and-push-image:
           account-url: AWS_ECR_ACCOUNT_URL
           region: AWS_DEFAULT_REGION
@@ -64,7 +63,6 @@ workflows:
   
   php-deploy:
     jobs:
-      - build
       - aws-ecr/build-and-push-image:
           account-url: AWS_ECR_ACCOUNT_URL
           region: AWS_DEFAULT_REGION
