@@ -3,6 +3,7 @@
 @section('title', 'レシピランキング')
 
 @section('content')
+
     @auth
         @include("header")
     @else
@@ -10,8 +11,13 @@
         <a href="/users/confirm"><div class="confirm-link">ヘルシーライフに登録すると様々な機能が利用できます！！</div></a>
     @endauth
 
+    <div class="page-title"><i class="fas fa-crown"></i>人気レシピ TOP10<i class="fas fa-crown"></i></div>
+
     <div class="main-container">
+        <?php $i=0; ?>
         @foreach($posts as $post)
+            <?php $i++; ?>
+            <div class="ranking-number"><i class="fas fa-medal ranking-number-{{ $i }}"></i>{{ $i }}</div>
             <div class="each-post">
                 <div class="top-bar">
                     <div class="user-info">

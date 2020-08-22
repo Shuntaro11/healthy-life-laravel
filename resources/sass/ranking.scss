@@ -1,0 +1,32 @@
+.ranking-number{
+  margin: 30px auto 0;
+  font-size: 25px;
+  width: 50vw;
+  font-weight: bold;
+
+  @media (max-width: 960px) {
+    width: 90vw;
+  }
+
+  @media (max-width: 640px) {
+    margin-top: 20px;
+    width: 100vw;
+    font-size: 20px;
+  }
+
+  i{
+    margin: 0 10px;
+  }
+}
+
+.ranking-number-1{
+  color: gold;
+}
+
+.ranking-number-2{
+  color: silver;
+}
+
+.ranking-number-3{
+  color: darkgoldenrod;
+}
