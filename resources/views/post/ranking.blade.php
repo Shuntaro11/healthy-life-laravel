@@ -53,17 +53,7 @@
             </div>
         @endforeach
     </div>
-    <div class="pagination-wrapper">
-        @if(isset($name))
-            {{ $posts->appends(['name' => $name])->links() }}
 
-        @elseif(isset($search_query))
-            {{ $posts->appends(['search' => $search_query])->links() }}
-
-        @else
-            {{ $posts->links() }}
-        @endif
-    </div>
     @include("nav-bar")
     @include("footer")
     
