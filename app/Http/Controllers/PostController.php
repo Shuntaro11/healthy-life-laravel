@@ -236,4 +236,10 @@ class PostController extends Controller
 
         return view('post.index', compact('posts', 'search_result', 'search_query'));
     }
+
+    public function ranking()
+    {
+        $posts = Post::withCount('likes')->orderBy('likes_count', 'desc')->get()->take(10);
+        return view('post.ranking', compact('posts'));
+    }
 }

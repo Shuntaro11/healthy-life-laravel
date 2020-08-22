@@ -1,8 +1,9 @@
 @extends('template')
 
-@section('title', 'レシピ一覧')
+@section('title', 'レシピランキング')
 
 @section('content')
+
     @auth
         @include("header")
     @else
@@ -10,15 +11,13 @@
         <a href="/users/confirm"><div class="confirm-link">ヘルシーライフに登録すると様々な機能が利用できます！！</div></a>
     @endauth
 
-    <a href="/posts/ranking">
-        レシピランキング
-    </a>
+    <div class="page-title"><i class="fas fa-crown"></i>人気レシピ TOP10<i class="fas fa-crown"></i></div>
 
-    @isset($search_result)
-        <div class="page-title">{{ $search_result }}</div>
-    @endisset
     <div class="main-container">
+        <?php $i=0; ?>
         @foreach($posts as $post)
+            <?php $i++; ?>
+            <div class="ranking-number"><i class="fas fa-medal ranking-number-{{ $i }}"></i>{{ $i }}</div>
             <div class="each-post">
                 <div class="top-bar">
                     <div class="user-info">
@@ -60,17 +59,7 @@
             </div>
         @endforeach
     </div>
-    <div class="pagination-wrapper">
-        @if(isset($name))
-            {{ $posts->appends(['name' => $name])->links() }}
 
-        @elseif(isset($search_query))
-            {{ $posts->appends(['search' => $search_query])->links() }}
-
-        @else
-            {{ $posts->links() }}
-        @endif
-    </div>
     @include("nav-bar")
     @include("footer")
     

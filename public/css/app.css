@@ -18751,3 +18751,42 @@ textarea {
   }
 }
 
+/* 人気レシピランキング画面 */
+
+.ranking-number {
+  margin: 30px auto 0;
+  font-size: 25px;
+  width: 50vw;
+  font-weight: bold;
+}
+
+@media (max-width: 960px) {
+  .ranking-number {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .ranking-number {
+    margin-top: 20px;
+    width: 100vw;
+    font-size: 20px;
+  }
+}
+
+.ranking-number i {
+  margin: 0 10px;
+}
+
+.ranking-number-1 {
+  color: gold;
+}
+
+.ranking-number-2 {
+  color: silver;
+}
+
+.ranking-number-3 {
+  color: darkgoldenrod;
+}
+
