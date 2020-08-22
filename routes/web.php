@@ -16,6 +16,8 @@ Route::get('/', 'PostController@index')->name('top');
 Route::put('users', 'UserController@update');
 Route::get('users/confirm', 'UserController@confirm');
 
+Route::get('posts/ranking', 'PostController@ranking');
+
 Route::get('/posts/search', 'PostController@search')->name('posts.search');
 
 Auth::routes();
