@@ -10,13 +10,14 @@
         <a href="/users/confirm"><div class="confirm-link">ヘルシーライフに登録すると様々な機能が利用できます！！</div></a>
     @endauth
 
-    <div class="ranking-link">
-        <a href="/posts/ranking">人気レシピ</a>
-    </div>
-
     @isset($search_result)
         <div class="page-title">{{ $search_result }}</div>
     @endisset
+
+    <div class="ranking-link">
+        <a href="/posts/ranking">人気レシピランキング ></a>
+    </div>
+    
     <div class="main-container">
         @foreach($posts as $post)
             <div class="each-post">
