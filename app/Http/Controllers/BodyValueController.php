@@ -16,9 +16,22 @@ class BodyValueController extends Controller
             'height' => ['required', 'numeric'],
         ]);
 
-        $bmi = round($request->weight / (( $request->height / 100 ) * ( $request->height / 100 )), 1);
+        $auth = Auth::user();
+        $before_body_values = BodyValue::where('user_id', "{$auth->id}")->where('date', $request->date)->get();
+        
 
-        $body_values = new BodyValue;
+        $bmi = round($request->weight / (( $request->height / 100 ) * ( $request->height / 100 )), 1);
+        
+        if(isset($before_body_values)){
+
+            $body_values == $before_body_values;
+
+        } else {
+
+            $body_values = new BodyValue;
+
+        }
+
         $body_values->date = $request->date;
         $body_values->weight = $request->weight;
         $body_values->height = $request->height;
