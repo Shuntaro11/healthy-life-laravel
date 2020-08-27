@@ -19,11 +19,13 @@
     <div class="body-value-container">
         <div class="post-form-container body-value-form-container">
             <p class="container-title">体重・身長</p>
+            <p class="post-form-notice">（値を入力するとBMI値がグラフに反映されます。）</p>
             <form action="/body_values" method="post" enctype="multipart/form-data">
                 @csrf
                 <p class="form-label">日付</p>
                 <div><input type="date" name="date" value={{$today}} class="post-input input-date"></div>
                 <p class="form-label">体重(kg)</p>
+                <p class="post-form-notice">0.1kg単位で入力できます。</p>
                 <div><input type="number" step="0.1" min="20" max="500" name="weight" class="post-input input-quantity"></div>
                 
                 @if ($errors->first('weight'))
@@ -31,6 +33,7 @@
                 @endif
                                     
                 <p class="form-label">身長(cm)</p>
+                <p class="post-form-notice">0.1kg単位で入力できます。</p>
                 @if ($height === 0)
                     <div><input type="number" step="0.1" min="50" max="300" name="height" class="post-input input-quantity"></div>
                 @else
@@ -110,6 +113,7 @@
             @csrf
             <div>
                 <p class="container-title">食べたものを登録する</p>
+                <p class="post-form-notice">（値を入力すると食材データが下のグラフに反映されます。）</p>
                 <p class="form-label">日付</p>
                 <div><input type="date" name="ate_at" value={{$today}} class="post-input input-date"></div>
                 <p class="form-label">食材</p>
