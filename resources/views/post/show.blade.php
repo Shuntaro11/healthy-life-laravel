@@ -4,19 +4,19 @@
 
 @section('content')
     @include("header")
-    <div class="page-title">レシピ</div>
+    <div class="page-title">レシピ概要</div>
 
     <div class="post-form-container">
         @auth
             <div class="post-edit-link">
                 @if($post->user_id === Auth::user()->id)
                     <a href="/posts/{{$post->id}}/edit">
-                        <div class="delete-link">レシピを編集する</div>
+                        <div class="delete-link">マイレシピを編集する</div>
                     </a>
                     <form method="post" action="/posts/{{$post->id}}">
                         <input name="_method" type="hidden" value="DELETE">
                         {{ csrf_field()}}
-                            <button type="submit" class="delete-link" onClick="delete_alert(event);return false;">レシピを削除する</button>
+                            <button type="submit" class="delete-link" onClick="delete_alert(event);return false;">マイレシピを削除する</button>
                     </form>
                 @endif
             </div>
