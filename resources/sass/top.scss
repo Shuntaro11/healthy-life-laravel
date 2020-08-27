@@ -21,6 +21,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
   background: white;
+  border-radius: 10px;
 }
 
 .top-bar {
@@ -89,6 +90,7 @@
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   width: 30vw;
   height: 30vw;
+  border-bottom-left-radius: 10px;
 }
 
 .hover-wrap {
@@ -345,6 +347,7 @@
     width: 100vw;
     border-left: none;
     border-right: none;
+    border-radius: 0px;
   }
 
   .top-bar {
@@ -381,6 +384,11 @@
 
   .post-main-container {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100vw;
+  }
+
+  .post-image-wrapper{
+    border-bottom-left-radius: 0px;
   }
 
   .right-box {
