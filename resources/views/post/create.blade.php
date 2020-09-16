@@ -34,7 +34,7 @@
                     <p class="form-label">作り方</p>
                     <p class="post-form-notice">料理概要を2000文字以内で自由に入力してください</p>
                     <div class="post-info-wrapper">
-<textarea class="post-info-input" name="content" rows="20" placeholder="300字以内で入力" value="{{ old('content') }}">
+<textarea class="post-info-input" name="content" rows="20" value="{{ old('content') }}">
 【説明】
 
 【材料】
